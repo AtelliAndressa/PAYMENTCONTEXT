@@ -26,7 +26,7 @@ namespace PaymentContext.Domain.Entities
             decimal totalPaid, 
             System.Reflection.Metadata.Document document, 
             string payer, 
-            string address, 
+            Address address, 
             Email email)
         {
             Number = Guid
@@ -84,7 +84,7 @@ namespace PaymentContext.Domain.Entities
         /// Endere�o para emetir nota fiscal.
         /// Pode ser o endere�o de cobran�a.
         /// </summary>
-        public string Address { get; private set; }
+        public Address Address { get; private set; }
 
         /// <summary>
         /// Email do pagador.

@@ -27,7 +27,7 @@ namespace PaymentContext.Domain.Entities
             decimal totalPaid,
             System.Reflection.Metadata.Document document,
             string payer,
-            string address,
+            Address address,
             Email email) :
             base(paidDate, expireDate, total,
                 totalPaid, document, payer,

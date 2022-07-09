@@ -1,8 +1,9 @@
 using PaymentContext.Domain.ValueObjects;
+using PaymentContext.Shared.Entities;
 
 namespace PaymentContext.Domain.Entities
 {
-    public class Student
+    public class Student : Entity
     {
         /// <summary>
         /// Usamos esta lista para fazer as validações na assinatura.
@@ -16,13 +17,20 @@ namespace PaymentContext.Domain.Entities
         /// <param name="lastName"></param>
         /// <param name="document"></param>
         /// <param name="email"></param>
-        public Student(Name name, Document document, Email email)
+        public Student(Guid id, Name name,
+                       Document document,
+                       Email email,
+                       Address address) : base(id)
         {
+            Id = id;
             Name = name;
             Document = document;
             Email = email;
+            Address = address;
             _subscriptions = new List<Subscription>();
         }
+
+        public Guid Id { get; set; }
 
         /// <summary>
         /// Nome do estudante.
@@ -42,7 +50,7 @@ namespace PaymentContext.Domain.Entities
         /// <summary>
         /// Endereço do estudante.
         /// </summary>
-        public string Address { get; private set; }
+        public Address Address { get; private set; }
 
 
         /// <summary>
