@@ -19,9 +19,22 @@ namespace PaymentContext.Domain.Entities
         /// <param name="payer"></param>
         /// <param name="address"></param>
         /// <param name="email"></param>
-        protected Payment(DateTime paidDate, DateTime expireDate, decimal total, decimal totalPaid, System.Reflection.Metadata.Document document, string payer, string address, Email email)
+        protected Payment(
+            DateTime paidDate, 
+            DateTime expireDate, 
+            decimal total, 
+            decimal totalPaid, 
+            System.Reflection.Metadata.Document document, 
+            string payer, 
+            string address, 
+            Email email)
         {
-            Number = Guid.NewGuid().ToString().Replace("-", "").Substring(0, 10).ToUpper();
+            Number = Guid
+                .NewGuid()
+                .ToString()
+                .Replace("-", "")
+                .Substring(0, 10)
+                .ToUpper();
             PaidDate = paidDate;
             ExpireDate = expireDate;
             Total = total;

@@ -1,10 +1,4 @@
 using PaymentContext.Domain.ValueObjects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Metadata;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PaymentContext.Domain.Entities
 {
@@ -28,7 +22,7 @@ namespace PaymentContext.Domain.Entities
             DateTime expireDate,
             decimal total,
             decimal totalPaid,
-            Document document,
+            System.Reflection.Metadata.Document document,
             string payer,
             string address,
             Email email) :

@@ -18,7 +18,7 @@ namespace PaymentContext.Domain.Entities
             DateTime expireDate,
             decimal total,
             decimal totalPaid,
-            Document document,
+            System.Reflection.Metadata.Document document,
             string payer,
             string address,
             Email email) :
