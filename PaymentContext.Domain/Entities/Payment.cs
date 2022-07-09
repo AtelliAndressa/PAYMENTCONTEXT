@@ -1,4 +1,5 @@
-﻿using System.Reflection.Metadata;
+﻿using PaymentContext.Domain.ValueObjects;
+using System.Reflection.Metadata;
 
 namespace PaymentContext.Domain.Entities
 {
@@ -18,7 +19,7 @@ namespace PaymentContext.Domain.Entities
         /// <param name="payer"></param>
         /// <param name="address"></param>
         /// <param name="email"></param>
-        protected Payment(DateTime paidDate, DateTime expireDate, decimal total, decimal totalPaid, Document document, string payer, string address, string email)
+        protected Payment(DateTime paidDate, DateTime expireDate, decimal total, decimal totalPaid, System.Reflection.Metadata.Document document, string payer, string address, Email email)
         {
             Number = Guid.NewGuid().ToString().Replace("-", "").Substring(0, 10).ToUpper();
             PaidDate = paidDate;
@@ -59,7 +60,7 @@ namespace PaymentContext.Domain.Entities
         /// <summary>
         /// Documento do pagador.
         /// </summary>
-        public Document Document { get; private set; }
+        public System.Reflection.Metadata.Document Document { get; private set; }
 
         /// <summary>
         /// Pessoa respons�vel pelo pagamento.
@@ -75,6 +76,6 @@ namespace PaymentContext.Domain.Entities
         /// <summary>
         /// Email do pagador.
         /// </summary>
-        public string Email { get; private set; }
+        public Email Email { get; private set; }
     }
 }

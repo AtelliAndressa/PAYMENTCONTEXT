@@ -16,7 +16,7 @@ namespace PaymentContext.Domain.Entities
         /// <param name="lastName"></param>
         /// <param name="document"></param>
         /// <param name="email"></param>
-        public Student(Name name, Document document, string email)
+        public Student(Name name, Document document, Email email)
         {
             Name = name;
             Document = document;
@@ -37,7 +37,7 @@ namespace PaymentContext.Domain.Entities
         /// <summary>
         /// Email do estudante.
         /// </summary>
-        public string Email { get; private set; }
+        public Email Email { get; private set; }
 
         /// <summary>
         /// Endereço do estudante.
