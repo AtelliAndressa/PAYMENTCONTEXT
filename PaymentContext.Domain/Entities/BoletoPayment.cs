@@ -1,9 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using PaymentContext.Domain.ValueObjects;
 using System.Reflection.Metadata;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PaymentContext.Domain.Entities
 {
@@ -32,7 +28,7 @@ namespace PaymentContext.Domain.Entities
             Document document,
             string payer,
             string address,
-            string email) :
+            Email email) :
             base(paidDate, expireDate, total,
                 totalPaid, document, payer,
                 address, email)
