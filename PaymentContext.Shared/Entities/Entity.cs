@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Flunt.Notifications;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,7 @@ namespace PaymentContext.Shared.Entities
     /// Uma entidade possue um Id, um value Objects não, essa classe 
     /// será herdada pelas entidades no domain.
     /// </summary>
-    public abstract class Entity
+    public abstract class Entity : Notifiable
     {
         /// <summary>
         /// Com o Guid o Id é gerado no dotnet, não depende do db.
