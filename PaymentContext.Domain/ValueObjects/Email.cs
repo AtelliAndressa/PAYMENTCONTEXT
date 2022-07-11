@@ -13,6 +13,7 @@ namespace PaymentContext.Domain.ValueObjects
         public Email(string address)
         {
             Address = address;
+           
             
         }
 
