@@ -1,6 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
+    <None Remove="Commands\ListViewPage1.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Commands\ListViewPage1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="flunt" Version="2.0.5" />
     <PackageReference Include="Flunt.Extensions.AspNet" Version="1.0.0" />
     <PackageReference Include="Flunt.Extensions.Br" Version="1.0.1" />
