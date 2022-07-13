@@ -6,7 +6,7 @@ namespace PaymentContext.Tests
     [TestClass]
     public class StudentTests
     {
-        [TestMethod]
+        //[TestMethod]
         public void AdicionarAssinatura()
         {
             //var subscription = new Subscription(null);

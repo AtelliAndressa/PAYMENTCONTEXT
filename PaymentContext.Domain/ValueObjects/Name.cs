@@ -25,5 +25,7 @@ namespace PaymentContext.Domain.ValueObjects
         /// Sobrenome do estudante.
         /// </summary>
         public string LastName { get; private set; }
+
+      
     }
 }
