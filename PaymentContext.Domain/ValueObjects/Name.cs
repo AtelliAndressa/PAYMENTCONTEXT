@@ -26,6 +26,9 @@ namespace PaymentContext.Domain.ValueObjects
         /// </summary>
         public string LastName { get; private set; }
 
-      
+        public override string ToString()
+        {
+            return $"{FirstName} {LastName}";
+        }
     }
 }

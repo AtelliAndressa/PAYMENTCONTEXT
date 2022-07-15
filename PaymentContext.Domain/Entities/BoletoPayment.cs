@@ -5,6 +5,19 @@ namespace PaymentContext.Domain.Entities
 {
     public class BoletoPayment : Payment
     {
+        private DateTime paidDate;
+        private DateTime expireDate;
+        private decimal total;
+        private decimal totalPaid;
+        private string payer;
+        private ValueObjects.Document document;
+        private Address address;
+        private Email email;
+
+        public BoletoPayment()
+        {
+        }
+
         /// <summary>
         /// construtor.
         /// </summary>
@@ -35,6 +48,20 @@ namespace PaymentContext.Domain.Entities
         {
             BarCode = barCode;
             BoletoNumber = boletoNumber;
+        }
+
+        public BoletoPayment(string barCode, string boletoNumber, DateTime paidDate, DateTime expireDate, decimal total, decimal totalPaid, string payer, ValueObjects.Document document, Address address, Email email)
+        {
+            BarCode = barCode;
+            BoletoNumber = boletoNumber;
+            this.paidDate = paidDate;
+            this.expireDate = expireDate;
+            this.total = total;
+            this.totalPaid = totalPaid;
+            this.payer = payer;
+            this.document = document;
+            this.address = address;
+            this.email = email;
         }
 
         /// <summary>
