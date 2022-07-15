@@ -1,6 +1,7 @@
 ﻿
 using PaymentContext.Domain.Commands;
 using PaymentContext.Domain.Entities;
+using PaymentContext.Domain.Enums;
 using PaymentContext.Domain.Repositories;
 using PaymentContext.Domain.Services;
 using PaymentContext.Domain.ValueObjects;
